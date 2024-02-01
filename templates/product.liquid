@@ -3,7 +3,9 @@
   The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %}
 
-<div itemscope itemtype="http://schema.org/Product">
+{% comment %} i comment the below part BEDO {% endcomment %}
+
+{% comment %} <div itemscope itemtype="http://schema.org/Product">
 
   {% section 'product-template' %}  
   
@@ -32,7 +34,7 @@
 
 </div>
 
-{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, auto_install: true, product: product %}
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, auto_install: true, product: product %} {% endcomment %}
 
 {% comment %} add new part  {% endcomment %}
 
