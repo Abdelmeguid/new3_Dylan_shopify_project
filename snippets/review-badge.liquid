@@ -1,0 +1,13 @@
+<div class="review-badge">
+  {% if badge_template == "product" %}
+    <!-- INSERT [PRODUCT PAGE] REVIEW BADGE HERE -->
+    
+  {% elsif badge_template == "grid" %}
+    <!-- INSERT [PRODUCT GRID] REVIEW BADGE HERE -->
+    
+  {% endif %}
+
+{% comment %}Start automatically added Judge.me widget{% endcomment %}
+  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+{% comment %}End automatically added Judge.me widget{% endcomment %}
+</div>
