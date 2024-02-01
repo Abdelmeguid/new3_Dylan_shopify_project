@@ -474,11 +474,11 @@ $accentFontStyle: normal;
 
 @font-face {
   font-family: 'icons';
-  src: url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.eot?85');
-  src: url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.eot?85#iefix') format("embedded-opentype"),
-       url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.woff?85') format("woff"),
-       url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.ttf?85') format("truetype"),
-       url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.svg?85#timber-icons') format("svg");
+  src: url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.eot?310');
+  src: url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.eot?310#iefix') format("embedded-opentype"),
+       url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.woff?310') format("woff"),
+       url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.ttf?310') format("truetype"),
+       url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.svg?310#timber-icons') format("svg");
   font-weight: normal;
   font-style: normal;
 };
@@ -919,11 +919,11 @@ label[for] {
 /*================ Partials | Icons ================*/
 @font-face {
   font-family: 'icons';
-  src: url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.eot?85');
-  src: url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.eot?85#iefix') format("embedded-opentype"),
-       url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.woff?85') format("woff"),
-       url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.ttf?85') format("truetype"),
-       url('//accuneutraal.nl/cdn/shop/t/4/assets/icons.svg?85#timber-icons') format("svg");
+  src: url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.eot?310');
+  src: url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.eot?310#iefix') format("embedded-opentype"),
+       url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.woff?310') format("woff"),
+       url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.ttf?310') format("truetype"),
+       url('//accuneutraal.nl/cdn/shop/t/5/assets/icons.svg?310#timber-icons') format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1933,7 +1933,7 @@ $max: max-width;
   -moz-appearance: none;
   appearance: none;
   background: {
-    image: url('//accuneutraal.nl/cdn/shop/t/4/assets/ico-select.svg?v=64821302289947715631703495769')!important;
+    image: url('//accuneutraal.nl/cdn/shop/t/5/assets/ico-select.svg?v=64821302289947715631706625755')!important;
     repeat: no-repeat!important;
     position: right $paddingButtonX center!important;
     size: auto $baseFontSize;
@@ -6174,7 +6174,7 @@ cite{
   }
   
   .select-custom{
-    background-image: url('//accuneutraal.nl/cdn/shop/t/4/assets/ico-select-custom.svg?v=148372082815147066101703495769')!important;
+    background-image: url('//accuneutraal.nl/cdn/shop/t/5/assets/ico-select-custom.svg?v=148372082815147066101706625755')!important;
   }
 }
 

@@ -1,0 +1,781 @@
+ {% schema %}
+    {
+      "name": "Homepageee ",
+      "settings": [],
+      "presets": [
+        {
+          "name": "blue_first_part",
+          "category": "Homepage"
+        }
+      ]
+    }
+    {% endschema %}
+
+    
+
+
+    
+    <!-- start of blue part -->
+  <div class="section-3 hero home wf-section">
+    <div class="container-4">
+      <div class="columns-11 w-row">
+        <div class="header-column w-col w-col-6">
+          <div class="div-block-30"><img src="https://cdn.shopify.com/s/files/1/0784/5507/9254/files/round01.png?v=1706781315" alt="Thuisbatterij installateur Nederland" class="image-102-copy"></div>
+          <h1 class="hero-h1 home homepage">Jouw duurzame energie in eigen hand. Het kan nu.<span class="brand-span"></span><span class="brand-span"></span></h1>
+        </div>
+       <div class="column-17 w-col w-col-6">
+          <div class="container-flex home" style="margin-top: 30px; padding: 25px; box-shadow: 0 0 50px #1f1f1f;" id="onboarding-block">
+            <div class="hero-content inside">
+              <h1 class="header-h4" style="margin-bottom: 10px;margin-top: 0px;">
+                <p class="brand-span" style="font-size: 20px;color: #724ef5;margin-bottom: 10px; margin-top: 10px;">Persoonlijk, vrijblijvend en gratis advies.</p>
+                <span>Bereken in 1 minuut jouw besparing met een thuisbatterij.</span><br>
+              </h1>
+              <div class="form-block-3 w-form">
+                <form id="email-form" name="email-form" data-name="Email Form" method="POST" class="form" action="https://accuselect.nl/do/onboarding.php"> <!-- FORM -->
+                  <p class="form-title">Waar woon je?</p>
+                  <div class="div-block-24">
+                    <div class="text-field-wrapper third">
+  
+                      <input type="text" class="text-field-2 w-input" value="" name="postcode" data-name="postcode" placeholder="Postcode" id="postcode-input" required="" maxlength="7" oninput="this.value = this.value.toUpperCase()">
+  
+                    </div>
+                    <div class="text-field-wrapper third small">
+  
+                      <input type="text" class="text-field-2 w-input" maxlength="10" value="" name="huisnr" data-name="huisnr" placeholder="Huisnr." id="Huisnr" required="">
+  
+                      <label for="name" class="field-label-2"></label>
+                      <div class="text-field-done"></div>
+                    </div>
+                    <div class="text-field-wrapper third small">
+  
+                      <input type="text" class="text-field-2 w-input" maxlength="20" name="toev" value="" data-name="toev" placeholder="Toevg." id="Toevg">
+  
+                      <label for="name" class="field-label-2"></label>
+                    </div>
+                  </div>
+  
+                  <script>
+                    function handleInputChange() {
+                      const postcodeInput = document.getElementById("postcode-input").value;
+                      const isWaddeneiland = waddeneilandenCheck(postcodeInput);
+                      const waddeneilandAlert = document.getElementById("waddeneilandAlert");
+                      if (isWaddeneiland) {
+                        waddeneilandAlert.style.display = "block";
+                      } else {
+                        waddeneilandAlert.style.display = "none";
+                      }
+                    }
+                    document.getElementById("postcode-input").addEventListener("input", handleInputChange);
+  
+                      //Enter = tab feature
+                      const form = document.querySelector('form');
+                      const inputs = form.querySelectorAll('input');
+                      form.addEventListener('keydown', function (e) {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          const currentInput = document.activeElement; 
+                          const currentIndex = Array.from(inputs).indexOf(currentInput);
+  
+                          if (currentIndex !== -1 && currentIndex < inputs.length - 1) {
+                            const nextInput = inputs[currentIndex + 1];
+                            nextInput.focus();
+                          } else {
+                            currentInput.blur();
+                          }
+                        }
+                      });
+                  </script>
+                  <div class="div-block-29" id="waddeneilandAlert" style="display:none;">
+                    <div class="text-block-90">Sorry, maar wij leveren niet op de Waddeneilanden. Neem <a href="https://accuselect.nl/contact/">contact op</a> voor een voorstel op maat.</div>
+                  </div>
+  
+                  <div class="form-step">
+                    <div class="fields-group">
+                      <div class="radio-button-container w-container">
+                        <p class="form-title">Heb je zonnepanelen thuis?</p>
+                        <div class="radio-buttons genders"><label class="radio-button-field-2 w-radio">
+                            <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button gender male w-radio-input"></div>
+  
+                            <input type="radio" data-name="zonnepanelen" id="yes" name="zonnepanelen" value="yes" style="opacity:0;position:absolute;z-index:-1">
+                            <span for="yes" class="radio-button-label-2 w-form-label"></span>
+  
+                          </label><label class="radio-button-field-2 w-radio">
+                            <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button gender male yes w-radio-input"></div>
+  
+                            <input type="radio" data-name="zonnepanelen" id="no" name="zonnepanelen" value="no" style="opacity:0;position:absolute;z-index:-1">
+                            <span for="no" class="radio-button-label-2 w-form-label"></span>
+  
+                          </label></div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <input type="hidden" name="formnr" value="nul">
+                  <input type="submit" value="Bereken je besparing" class="form-button w-button">
+  
+                  <div class="button-card-wrapper">
+                    <a href="https://accuselect.nl/kopen/thuisbatterij-samenstellen/" class="link-2 underline-trail w-inline-block">
+                      <div class="utility-paragraph" style="text-decoration: none;"><span>of</span> <span style="text-decoration: underline;">je thuisbatterij zelf samenstellen</span></div>
+                    </a>
+                  </div>
+                                </form>
+              </div>
+            </div>
+          </div>
+          <div class="container-8 w-container">
+            <div class="columns-10 w-row">
+              <div class="column-14 w-col w-col-4">
+                <div class="hero-paragraph header-paragraph white"><span class="vinkje">✓</span> Bespaar op je energierekening</div>
+              </div>
+              <div class="column-15 w-col w-col-4">
+                <div class="hero-paragraph header-paragraph white"><span class="vinkje">✓</span> Word onafhankelijker van het stroomnet</div>
+              </div>
+              <div class="column-16 w-col w-col-4">
+                <div class="hero-paragraph header-paragraph white"><span class="vinkje">✓</span> Thuisbatterijen van Europese merken</div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div> 
+  </div>
+  {% comment %} part2_house {% endcomment %}
+  <div class="columns-11 half w-row">
+    <div class="header-column information w-col w-col-6"><img src="https://cdn.shopify.com/s/files/1/0784/5507/9254/files/illustration_home-with-battery-outside_eae88527-4cb2-4a12-a87a-88fde250ab8d.png?v=1706784950" class="illustration home"></div>
+    <div class="column-24 w-col w-col-6">
+      <h1 class="header-h4">Hoe werkt een thuisbatterij?<br><span class="brand-span"></span></h1>
+      <div class="hero-paragraph">Een thuisbatterij <em>(ook wel thuisaccu)</em> wordt overdag volgeladen met zonne-energie die je niet direct verbruikt. De opgeslagen energie kun je 's avonds en 's ochtends gebruiken als stroomvoorziening wanneer je zonnepanelen niet genoeg energie zelf opwekken. Hierdoor hoef je minder energie van het net af te halen en maak je dus veel meer gebruik van je eigen zonne-energie. Slim gebruik van je zonne-energie om makkelijk te besparen dus!<br><br>Met een thuisbatterij laad je overtollige zonne-energie in je batterij. Pas als de batterij vol is en je nog meer zonne-energie produceert, lever je energie terug. Als je 's avonds thuis komt heb je genoeg energie in de batterij om hier je energiebehoeftes mee te voorzien, tot en met de volgende ochtend!<br><br>Om onaangename verrassingen door stijgende energieprijzen en terugleverheffingen te voorkomen, biedt een thuisbatterij uitkomst. Door te investeren in een thuisbatterij maak je jezelf minder afhankelijk van energieleveranciers. Hierdoor neem je namelijk minder energie af en lever je minder zonne-energie terug aan het overbelaste net. Bij grote prijsschommelingen of nieuwe heffingen ben je met een thuisbatterij goed voorbereid.</div>
+      <a href="https://accuselect.nl/zonne-energie-opslaan" class="form-button w-button button-full-home" style="background-color: #eaeaea; color: #373737; min-height: 40px;margin-left: 0%; font-size: 14px;">Lees meer over thuisbatterijen &gt;</a>
+    </div>
+  </div>
+  {% comment %} part3_BTW {% endcomment %}
+  <div class="columns-11 half w-row">
+        <div class="header-column information w-col w-col-6">
+          <div class="container-flex home">
+            <div class="hero-content inside">
+              <h1 class="header-h4">21% BTW teruggave op je thuisbatterij<br></h1>
+              <p class="hero-paragraph">Wist je dat je nu ook 21% BTW terug kunt krijgen na de aanschaf van je slimme thuisbatterij met<strong> slimme aansturing van Accuselect</strong>? Deze regeling is sinds kort van toepassing op slim aangestuurde thuisbatterijen met een dynamisch energiecontract.<br>Slimme thuisbatterijen die energie gunstig inkopen en verkopen, vallen onder de regeling voor BTW teruggave. Dit betekent dat je niet alleen kunt profiteren van slim energiegebruik, maar ook van een financiële meevaller door de BTW op de aanschafprijs terug te vragen.<br></p>
+              <div class="button-card-wrapper header">
+                <a href="https://accuselect.nl/thuisbatterij/btw-teruggave" class="link-2 underline-trail besparen w-inline-block">
+                  <div class="utility-paragraph">Lees hier meer.</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-col w-col-6"><img src="https://accuselect.nl/images/Giv3-10-21btw.png" loading="lazy" sizes="(max-width: 479px) 64vw, (max-width: 767px) 65vw, (max-width: 991px) 32vw, (max-width: 1439px) 33vw, (max-width: 1919px) 435px, 348px" alt="BTW teruggave thuisbatterij" class="illustration"></div>
+      </div>
+</div>
+{% comment %} part 4 echt {% endcomment %}
+<div class="columns-11 w-row">
+  <div class="header-column w-col w-col-6">
+    <div class="container-flex home">
+      <div class="hero-content inside">
+        <h1 class="header-h4">Écht slim energiegebruik</h1>
+        <p class="hero-paragraph">Optimaliseer jouw financiële voordeel door je thuisbatterij te combineren met een dynamisch energiecontract via Accuselect. Met de Accuselect Energy Manager kun je volledig automatisch geld verdienen aan prijsverschillen van dynamische energietarieven.<br>De Accuselect Energy Manager wordt zonder dat er een extra aansluiting voor nodig is, gekoppeld aan de thuisbatterij die wij bij jou plaatsen. Zo maken we deze thuisbatterij nóg slimmer.<br>Met het algoritme dat Accuselect heeft ontwikkeld vanuit de TU Delft, zorgt de Accuselect Energy Manager er automatisch voor dat jouw thuisbatterij zich vollaadt met de goedkoopste energie. Wanneer de energieprijzen negatief zijn, krijg je hier zelfs geld voor! Wanneer op een later moment op de dag de energieprijzen hoger zijn, zal de thuisbatterij de overtollige opgeslagen energie tegen deze duurdere prijs weer verkopen. Zo verdien jij volledig automatisch geld met jouw dynamische energiecontract. Geen dagelijks gedoe met instellingen en een app, maar gewoon simpel het algoritme zijn werk laten doen!<br></p>
+        <a href="https://accuselect.nl/thuisbatterij/slimme-aansturing" class="form-button w-button button-full-home" style="background-color: #eaeaea; color: #373737; min-height: 40px;margin-left: 0%;">Lees meer over slimme aansturing &gt;</a>
+      </div>
+      <div class="container-8 w-container"></div>
+      <div class="container-5">
+        <div class="form-mask"></div>
+      </div>
+    </div>
+  </div>
+  <div class="column-23 w-col w-col-6"><img src="https://accuselect.nl/images/illustration_smart-home-battery.png" loading="lazy" srcset="https://accuselect.nl/images/illustration_smart-home-battery.png 500w, https://accuselect.nl/images/illustration_smart-home-battery.png 800w, https://accuselect.nl/images/illustration_smart-home-battery.png 1080w, https://accuselect.nl/images/illustration_smart-home-battery.png 1500w" sizes="(max-width: 479px) 89vw, (max-width: 767px) 66vw, (max-width: 991px) 32vw, (max-width: 1919px) 33vw, 27vw" alt="Slimme thuisbatterij aansturing, geld verdienen met een thuisbatterij" class="illustration"></div>
+</div>
+{% comment %} part 5 product {% endcomment %}
+
+<div class="container information">
+      <div class="title-wrap-centre">
+        <h2 class="header-h4">Welke thuisbatterij past bij jou?</h2>
+      </div>
+      <div class="w-layout-grid grid-batteries home">
+        <div class="card content-left pd-32px---48px---56px battery"><img sizes="(max-width: 479px) 81vw, (max-width: 767px) 85vw, (max-width: 991px) 86vw, (max-width: 1439px) 750px, 1158px" srcset="https://accuselect.nl/images/Giv3-10-p-500.png 500w, https://accuselect.nl/images/Giv3-10-p-800.png 800w, https://accuselect.nl/images/Giv3-10-p-1080.png 1080w, https://accuselect.nl/images/Giv3-10-p-1600.png 1600w, https://accuselect.nl/images/Giv3-10.png 1724w" alt="GivEnergy thuisbatterij stackable 3 fase Nederland slimme sturing" src="https://accuselect.nl/images/Giv3-10.png" class="image-100">
+          <p class="heading-5 review"><strong>GivEnergy Stackable Battery</strong></p>
+          <p class="hero-paragraph">Een flexibel driefase systeem van de Britse producent GivEnergy.<br></p>
+          <div class="button-card-wrapper">
+            <a href="https://accuselect.nl/thuisbatterij/givenergy" class="link-2 underline-trail w-inline-block">
+              <div class="utility-paragraph">Meer informatie</div>
+            </a>
+          </div>
+        </div>
+        <div class="card content-left pd-32px---48px---56px battery"><img sizes="(max-width: 479px) 81vw, (max-width: 767px) 85vw, (max-width: 991px) 86vw, (max-width: 1439px) 750px, 1158px" srcset="https://accuselect.nl/images/Giv2-5bat-p-500.png 500w, https://accuselect.nl/images/Giv2-5bat-p-800.png 800w, https://accuselect.nl/images/Giv2-5bat-p-1080.png 1080w, https://accuselect.nl/images/Giv2-5bat-p-1600.png 1600w, https://accuselect.nl/images/Giv2-5bat.png 1724w" alt="GivEnergy thuisbatterij monofase Nederland slimme sturing" src="https://accuselect.nl/images/Giv2-5bat.png" class="image-100">
+          <p class="heading-5 review"><strong>GivEnergy Batterypacks</strong></p>
+          <p class="hero-paragraph">Een flexibel monofase systeem van de Britse producent GivEnergy.<br></p>
+          <div class="button-card-wrapper">
+            <a href="https://accuselect.nl/thuisbatterij/givenergy" class="link-2 underline-trail w-inline-block">
+              <div class="utility-paragraph">Meer informatie</div>
+            </a>
+          </div>
+        </div>
+        <div class="card content-left pd-32px---48px---56px battery"><img sizes="(max-width: 479px) 81vw, (max-width: 767px) 85vw, (max-width: 991px) 86vw, (max-width: 1439px) 750px, 1158px" srcset="https://accuselect.nl/images/Sonnen-driefase-p-500.png 500w, https://accuselect.nl/images/Sonnen-driefase-p-800.png 800w, https://accuselect.nl/images/Sonnen-driefase-p-1080.png 1080w, https://accuselect.nl/images/Sonnen-driefase-p-1600.png 1600w, https://accuselect.nl/images/Sonnen-driefase.png 1724w" alt="sonnenBatterie 10 Performance thuisbatterij" src="https://accuselect.nl/images/Sonnen-driefase.png" class="image-100">
+          <p class="heading-5 review"><strong>sonnenBatterie 10 Performance</strong></p>
+          <p class="hero-paragraph">Een krachtig driefase systeem van de Duitse producent Sonnen.<br></p>
+          <div class="button-card-wrapper">
+            <a href="https://accuselect.nl/thuisbatterij/sonnen" class="link-2 underline-trail w-inline-block">
+              <div class="utility-paragraph">Meer informatie</div>
+            </a>
+          </div>
+        </div>
+        <div class="card content-left pd-32px---48px---56px battery"><img sizes="(max-width: 479px) 81vw, (max-width: 767px) 85vw, (max-width: 991px) 86vw, (max-width: 1439px) 750px, 1158px" srcset="https://accuselect.nl/images/Sonnen-monofase-p-500.png 500w, https://accuselect.nl/images/Sonnen-monofase-p-800.png 800w, https://accuselect.nl/images/Sonnen-monofase-p-1080.png 1080w, https://accuselect.nl/images/Sonnen-monofase-p-1600.png 1600w, https://accuselect.nl/images/Sonnen-monofase.png 1724w" alt="sonnenBatterie 10 monofase thuisbatterij" src="https://accuselect.nl/images/Sonnen-monofase.png" class="image-100">
+          <p class="heading-5 review"><strong>sonnenBatterie 10 monofase</strong></p>
+          <p class="hero-paragraph">Een krachtig monofase systeem van de Duitse producent Sonnen.<br></p>
+          <div class="button-card-wrapper">
+            <a href="https://accuselect.nl/thuisbatterij/sonnen" class="link-2 underline-trail w-inline-block">
+              <div class="utility-paragraph">Meer informatie</div>
+            </a>
+          </div>
+        </div>
+  </div>
+</div> 
+ {% comment %} part5  testmonials    {% endcomment %}
+ <div class="container reviews">
+      <div class="container-default-4 w-container">
+
+  <div class="title-wrap-centre">
+          <h2 class="header-h4">Wat zeggen klanten over ons?<span class="brand-span"></span></h2>
+<!-- TrustBox widget - Micro Review Count -->
+<div class="trustpilot-widget" data-locale="nl-NL" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="62bdaedd6a6aea301bdbd406" data-style-height="24px" data-style-width="100%" data-theme="light" data-min-review-count="50" data-style-alignment="center">
+  <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" rel="noopener">Trustpilot</a>
+</div>
+<!-- End TrustBox widget -->
+        </div>
+        <div class="slider-wrapper w-slider" data-autoplay="false" data-hide-arrows="true" data-disable-swipe="false" data-w-id="f466b4f0-8c24-2cdf-cb59-dfd4f64519c1" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+          <div class="slider-mask width-390px w-slider-mask">
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Waardevolle investering thuisbatterij installatie </p>
+                <p class="hero-paragraph review">Duidelijke en goede voorbespreking en voorbereiding. De mensen van AccuSelect weten waar ze het over hebben. Heldere prijsopgave en de uitvoering door de AccuSelect installateur was erg netjes. Fijn om zo samen te werken.</p>
+                <div class="flex-horizontal-2">
+                  <div>
+                    <h5 class="heading-5 review-under">
+                      <a href="https://nl.trustpilot.com/review/accuselect.nl#" target="_blank" rel="noopener noreferrer" class="heading-5">Daan de Mooij</a>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Goede pre- en aftersale services, daar gaat het ook om!</p>
+                <p class="hero-paragraph review">Goede pre- en aftersale services, dat is net zo belangrijk als de hardware. Tijd en moeite worden niet gespaard totdat alle vragen zijn opgelost en de installatie werkt zoals bedoeld. Ik ben een tevreden klant nu en zal zeker op accuselect terugvallen bij eventueel komende vragen. Lijkt wel dat ik er "wat vrienden" erbij gekregen heb die snappen wat energietransitie betekent.</p>
+                <div class="flex-horizontal-2">
+                  <div>
+                    <h5 class="heading-5 review-under">
+                      <a href="https://nl.trustpilot.com/review/accuselect.nl#" target="_blank" rel="noopener noreferrer" class="heading-5">Jimmy</a>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Gewoon goed werk</p>
+                <p class="hero-paragraph review">Vanaf het eerste verzoek om informatie tot aan de installatie een plezierig traject doorlopen. Na goed doorvragen door Accuselect wat de behoeften zijn, een daarop gebaseerd gedegen advies gekregen. Prettig ook dat voor installatie er eerst een schouwing plaats vindt, zodat ook bij de daadwerkelijke installatie er geen verrassingen zijn. Na installatie het huis weer keurig achter gelaten met een goedwerkende installatie.</p>
+                <div class="flex-horizontal-2">
+                  <div>
+                    <h5 class="heading-5 review-under">
+                      <a href="https://nl.trustpilot.com/review/accuselect.nl#" target="_blank" rel="noopener noreferrer" class="heading-5">Jos Schreurs</a>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Dik tevreden</p>
+                <p class="hero-paragraph review">De Accuselect website is overzichtelijk, de informatie nuttig. Vragen via een contactformulier worden beantwoord. Een (telefonisch) adviesgesprek is snel aangevraagd. Aan de hand van je thuissituatie wordt een technisch voorstel gedaan met een goed onderbouwde offerte (de monteur komt van tevoren langs om het montagewerk en de kosten daarvan in te schatten). Levering, montage tot en met afwerking keurig gegaan <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer">Lees meer</a></p>
+                <div class="flex-horizontal-2">
+                  <div>
+                    <h5 class="heading-5 review-under">
+                      <a href="https://nl.trustpilot.com/review/accuselect.nl#" target="_blank" rel="noopener noreferrer" class="heading-5">Stan Sanders</a>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Méér dan tevreden over AccuSelect<br></p>
+                <p class="hero-paragraph review">Meer dan tevreden over AccuSelect. Het hele proces van het eerste contact tot en met de installatie en de facturering was buitengewoon vriendelijk, transparant en professioneel... <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer">Lees meer</a>
+                </p>
+                <div class="flex-horizontal-2">
+                  <div>
+                    <h5 class="heading-5 review-under">
+                      <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" class="heading-5">Walter Schellekens</a>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-02.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Goede Service<br></p>
+                <p class="hero-paragraph review">Goede service, installatie wordt goed voorbereid, kabels netjes weggewerkt, accusysteem werkt volgens de bedoeling.<br>‍<br>‍<br></p>
+                <div>
+                  <h5 class="heading-5 review-under">
+                    <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" class="heading-5">Marcel Groenendijk</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Goede ervaring met accuselect bij keuze…<br></p>
+                <p class="hero-paragraph review">Goede ervaring met accuselect bij keuze voor een thuisaccu. Voortraject en installatie goed en prettig verlopen. Begeleiding bij keuze voor type en inhoud was goed en professioneel… heel tevreden met het resultaat 👍.<br>‍<br>‍<br></p>
+                <div>
+                  <h5 class="heading-5 review-under">
+                    <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" class="heading-5">Ed van Laar</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Goede bereikbaarheid en communicatie.<br></p>
+                <p class="hero-paragraph review">Goede bereikbaarheid en communicatie. Goede service, men denkt met je mee.<br>‍<br>‍<br></p>
+                <div>
+                  <h5 class="heading-5 review-under">
+                    <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" class="heading-5">L ter Heide</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Zeer behulpzaam in het zoeken naar de juist oplossing<br></p>
+                <p class="hero-paragraph review">Na lang overleg en verschillende mogelijkheden ben ik tot een mooie geïnstalleerde thuisbatterij gekomen. (20kWh). Qua aan mijn wensen voldoen scoort dit bedrijf een 10+. Ik heb het support van dit bedrijf als zeer goed ervaren, had geen ander in mijn situatie gewild. Vragen, mogelijkheden en wensen die ik heb gesteld zijn zeer snel beantwoord, c.q. opgelost. Indien ik in de toekomst wil uitbreiden, upgraden of een nieuw project start zullen ze de eerste zijn die ik contact. Bedankt Accuselect voor het mooie resultaat, ik ga voortaan energieker door het leven, bovenal ben ik zeer tevreden met het resultaat.<br>‍<br>‍<br></p>
+                <div>
+                  <h5 class="heading-5 review-under">
+                    <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" class="heading-5">Ed van Laar</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Super goed advies en vakkundig…<br></p>
+                <p class="hero-paragraph review">Super goed advies en vakkundig geïnstalleerd. Ook de Aftersales is perfect. Wat een top bedrijf<br>‍<br>‍<br></p>
+                <div>
+                  <h5 class="heading-5 review-under">
+                    <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" class="heading-5">Willem Zuiderwijk</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Strak volgens planning uitgevoerd<br></p>
+                <p class="hero-paragraph review">Strak volgens planning uitgevoerd.<br>‍<br>‍<br></p>
+                <div>
+                  <h5 class="heading-5 review-under">
+                    <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" class="heading-5">Mark</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-item-mg w-slide">
+              <div class="card content-left pd-32px---48px---56px"><img src="https://accuselect.nl/images/stars1-5-01.svg" alt="Thuisbatterij beoordeling installatie" class="mg-bottom-24px">
+                <p class="heading-5 review">Great Service Accuselect!<br></p>
+                <p class="hero-paragraph review">Betrokken mensen bij Accuselect en leveren een complete service.<br>‍<br>‍<br></p>
+                <div>
+                  <h5 class="heading-5 review-under">
+                    <a href="https://nl.trustpilot.com/review/accuselect.nl" target="_blank" rel="noopener noreferrer" class="heading-5">Bas</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="btn-circle-secondary slider-arrow left---center-center outside testimonials-v12 w-slider-arrow-left" style="margin-bottom: 40px;">
+            <div class="line-rounded-icon" style=" margin-top: 10px; ">&lt;</div>
+          </div>
+          <div class="btn-circle-secondary slider-arrow right---center-center testimonials-v12 w-slider-arrow-right" style="margin-bottom: 40px;">
+            <div class="line-rounded-icon" style=" margin-top: 10px; ">&gt;</div>
+          </div>
+          <div class="hidden-on-desktop w-slider-nav w-round"></div> 
+
+        </div>
+
+      </div></div></div>
+
+       {% comment %} part6  Calculator and the rest code {% endcomment %}
+
+  <script>
+  let isUserScrolling = true;
+
+  function lightsout() {
+    const targetDiv = document.getElementById('onboarding-block');
+    const topMargin = 40; // Adjust the margin value as desired
+
+    const topOffset = targetDiv.getBoundingClientRect().top + window.pageYOffset;
+    const adjustedScrollTop = topOffset - topMargin;
+
+    isUserScrolling = false;
+    window.scrollTo({
+      top: adjustedScrollTop,
+      behavior: 'smooth'
+    });
+
+    document.getElementById("onboarding-block").classList.add("spotligt-onboarding");
+
+    setTimeout(function() {
+      isUserScrolling = true;
+    }, 200);
+
+  }
+
+  function lightson() {
+    document.getElementById("onboarding-block").classList.remove("spotligt-onboarding");
+    if (window.location.hash === '#start') {
+      history.replaceState(null, null, window.location.href.split('#')[0]);
+    }
+  }
+
+  document.addEventListener("click", function(event) {
+    var excludedDiv = document.getElementById("onboarding-block");
+    var targetElement = event.target;
+
+    // Check if the clicked element or any of its parent elements is the excluded div
+    var isClickInsideExcludedDiv = targetElement === excludedDiv || excludedDiv.contains(targetElement);
+
+    // If the click is not inside the excluded div, perform your desired action
+    if (!isClickInsideExcludedDiv) {
+      // Your action goes here
+      lightson();
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    if (isUserScrolling && window.pageYOffset > 1000) {
+      lightson();
+      isUserScrolling = true;
+    }
+  });
+
+  function handleHashChange() {
+    if (window.location.hash === '#start') {
+      lightsout();
+    }
+  }
+
+  window.addEventListener('hashchange', handleHashChange);
+  window.addEventListener('load', handleHashChange);
+</script>
+<div class="content-section body">
+  <div class="container-flex home down information">
+  <div class="hero-content inside">
+  <h1 class="header-h4" style="margin-bottom: 10px;margin-top: 0px;"><p class="brand-span" style="font-size: 20px;color: #724ef5;margin-bottom: 10px; margin-top: 10px;">Persoonlijk, vrijblijvend en gratis advies.</p>
+          <span>Bereken in 1 minuut jouw besparing met een thuisbatterij.</span><br></h1>
+  <p class="hero-paragraph">Met wat simpele gegevens over jouw energiesituatie kunnen wij beginnen met berekenen welke thuisbatterij er bij jou past.</p>
+  <div class="form-block-3 w-form">
+    <form id="email-form" name="email-form" data-name="Email Form" method="POST" class="form" action="https://accuselect.nl/do/onboarding.php"> <!-- FORM -->
+      <p class="form-title">Waar woon je?</p>
+      <div class="div-block-24">
+        <div class="text-field-wrapper third">
+
+          <input type="text" class="text-field-2 w-input" value="" name="postcode" data-name="postcode" placeholder="Postcode" id="postcode-input2" required="" maxlength="7" oninput="this.value = this.value.toUpperCase()">
+          
+        </div>
+        <div class="text-field-wrapper third small">
+
+          <input type="text" class="text-field-2 w-input" maxlength="256" value="" name="huisnr" data-name="huisnr" placeholder="Huisnr." id="Huisnr" required="">
+          
+          <label for="name" class="field-label-2"></label>
+          <div class="text-field-done"></div>
+        </div>
+        <div class="text-field-wrapper third small">
+          
+          <input type="text" class="text-field-2 w-input" maxlength="256" name="toev" value="" data-name="toev" placeholder="Toevg." id="Toevg">
+          
+          <label for="name" class="field-label-2"></label></div>
+      </div>
+
+      <script> function handleInputChange() { const postcodeInput = document.getElementById("postcode-input2").value; const isWaddeneiland = waddeneilandenCheck(postcodeInput); const waddeneilandAlert = document.getElementById("waddeneilandAlert2"); if (isWaddeneiland) { waddeneilandAlert.style.display = "block"; } else { waddeneilandAlert.style.display = "none"; } } document.getElementById("postcode-input2").addEventListener("input", handleInputChange); </script>
+      <div class="div-block-29" id="waddeneilandAlert2" style="display:none;">
+        <div class="text-block-90">Sorry, maar wij leveren niet op de Waddeneilanden. Neem <a href="https://accuselect.nl/contact/">contact op</a> voor een voorstel op maat.</div>
+      </div>
+
+      <div class="form-step">
+        <div class="fields-group">
+          <div class="radio-button-container w-container">
+            <p class="form-title">Heb je zonnepanelen thuis?</p>
+            <div class="radio-buttons genders"><label class="radio-button-field-2 w-radio">
+                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button gender male w-radio-input"></div> 
+                
+                <input type="radio" data-name="zonnepanelen" id="yes" name="zonnepanelen" value="yes" style="opacity:0;position:absolute;z-index:-1">
+                <span for="yes" class="radio-button-label-2 w-form-label"></span>
+
+              </label><label class="radio-button-field-2 w-radio">
+                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button gender male yes w-radio-input"></div>
+                
+                <input type="radio" data-name="zonnepanelen" id="no" name="zonnepanelen" value="no" style="opacity:0;position:absolute;z-index:-1">
+                <span for="no" class="radio-button-label-2 w-form-label"></span>
+
+              </label></div>
+          </div>
+        </div>
+      </div>
+
+        <input type="hidden" name="formnr" value="nul">
+        <input type="submit" value="Ontvang advies" class="form-button w-button">
+        <div class="button-card-wrapper">
+                  <a href="https://accuselect.nl/kopen/thuisbatterij-samenstellen/" class="link-2 underline-trail w-inline-block">
+                    <div class="utility-paragraph" style="text-decoration: none;"><span>of</span> <span style="text-decoration: underline;">je thuisbatterij zelf samenstellen</span></div>
+                  </a>
+                </div>
+      <?php displayError(); ?>
+    </form>
+  </div>
+</div>
+      <div class="container-8 w-container">
+        <div class="columns-10 w-row">
+          <div class="column-14 w-col w-col-4">
+            <div class="hero-paragraph header-paragraph"><span class="vinkje">✓</span> Bespaar gemiddeld €1930 per jaar</div>
+          </div>
+          <div class="column-15 w-col w-col-4">
+            <div class="hero-paragraph header-paragraph"><span class="vinkje">✓</span> Word onafhankelijker van het stroomnet</div>
+          </div>
+          <div class="column-16 w-col w-col-4">
+            <div class="hero-paragraph header-paragraph"><span class="vinkje">✓</span> Altijd gebruik maken van je eigen stroom</div>
+          </div>
+        </div>
+      </div>
+      <div class="container-5">
+        <div class="form-mask"></div>
+      </div>
+    </div>
+    </div><!-- Cal floating-popup embed code begins -->
+  <script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://app.cal.com"});
+  
+  Cal("floatingButton", {
+    calLink: "accuselect/adviesgesprek",
+    buttonColor: "#724ef5",
+    hideButtonIcon: "false",
+    buttonText: "Gratis adviesgesprek",
+    config: {
+      metadata: [identifier = ""],
+    },    
+  });
+  
+  Cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#724ef5"}},"hideEventTypeDetails":false});
+  
+  window.addEventListener("load", function() {
+    var calButton = document.querySelector("cal-floating-button");
+    calButton.style.zIndex = "100";
+    calButton.style.position = "absolute";
+  });
+  
+  </script>
+  <!-- Cal floating-popup embed code ends --><form id="dateForm" name="dateForm" method="POST" action="https://accuselect.nl/do/onboarding-cal.php">
+  <input type="hidden" id="dateCal" value="unknown" name="dateCal">
+</form>
+
+<script>
+  Cal("on", {
+    action: "bookingSuccessful",
+    callback: (e) => {
+      const {
+        data,
+        type,
+        namespace
+      } = e.detail;
+      console.log(e.detail.data.date);
+
+      document.getElementById("dateCal").value = e.detail.data.date;
+      document.forms.dateForm.submit();
+    }
+  })
+</script>
+
+<div class="footer">
+
+    <footer class="footer-wrapper---brix">  <!-- data-w-id="2ee9497c-58ac-fa6c-311a-49a3f6db3bbe" --> 
+      <div class="container-default w-container">
+        <div class="footer-top">
+          <div class="w-layout-grid grid-footer-v1---5-column">
+            <div id="w-node-_2ee9497c-58ac-fa6c-311a-49a3f6db3bc2-dcc6da57">
+              <a href="https://accuselect.nl" class="footer-logo-wrapper w-inline-block"><img src="https://accuselect.nl/images/logo-orange.png" sizes="(max-width: 479px) 100vw, 205px" width="205" srcset="https://accuselect.nl/images/logo-orange-p-500.png 500w, https://accuselect.nl/images/logo-orange-p-800.png 800w, https://accuselect.nl/images/logo-orange-p-1080.png 1080w, https://accuselect.nl/images/logo-orange-p-1600.png 1600w, https://accuselect.nl/images/logo-orange-p-2000.png 2000w, https://accuselect.nl/images/logo-orange.png 3046w" alt="Accuselect logo, besparen met een thuisbatterij" class="footer-logo---brix"></a>
+              <p class="mg-bottom-40px">Gemakkelijk besparen met een thuisbatterij. Het kan nu.</p>
+              <div class="w-layout-grid social-media-grid-top" style="filter: invert(26%) sepia(92%) saturate(2301%) hue-rotate(231deg) brightness(100%) contrast(93%)">
+                <a href="https://facebook.com/accuselect/" class="social-icon-link---brix w-inline-block"><img src="https://accuselect.nl/images/placeholder-logo-social-media-facebook.svg" loading="eager" alt="" class="social-icon---brix"></a>
+                <a href="https://twitter.com/accuselect/" class="social-icon-link---brix w-inline-block"><img src="https://accuselect.nl/images/placeholder-logo-social-media-twitter.svg" loading="eager" alt="" class="social-icon---brix"></a>
+                <a href="https://www.instagram.com/accuselect/" class="social-icon-link---brix w-inline-block"><img src="https://accuselect.nl/images/placeholder-logo-social-media-instagram.svg" loading="eager" alt="" class="social-icon---brix"></a>
+                <a href="https://www.linkedin.com/company/accuselect/" class="social-icon-link---brix w-inline-block"><img src="https://accuselect.nl/images/placeholder-logo-social-media-linkedin.svg" loading="eager" alt="" class="social-icon---brix"></a>
+              </div>
+            </div>
+            <div>
+              <a href="https://accuselect.nl/thuisaccu/" style="text-decoration: none;"><div class="text-300 bold footer-title">Thuisbatterij</div></a>
+              <ul role="list" class="footer-list-wrapper">
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/thuisbatterij/hoe-werkt-het/" class="footer-link-2">Hoe werkt het</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/thuisbatterij/waarom/" class="footer-link-2">Waarom</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/thuisbatterij/off-grid/" class="footer-link-2">Off-grid</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/thuisbatterij/slimme-aansturing/" class="footer-link-2">Slimme aansturing</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/kopen/thuisbatterij-samenstellen/" class="footer-link-2">Zelf samenstellen</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="text-300 bold footer-title">Kennisbank</div>
+              <ul role="list" class="footer-list-wrapper">
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/besparen/" class="footer-link-2">Besparen</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/verduurzamen/" class="footer-link-2">Duurzaamheid</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/thuisbatterij/zonnepanelen/" class="footer-link-2">Zonne-energie</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/installatie/" class="footer-link-2">Installatie</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/#start" class="footer-link-2">Gratis advies</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="text-300 bold footer-title">Accuselect</div>
+              <ul role="list" class="footer-list-wrapper">
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/over-ons/" class="footer-link-2">Over ons</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/faq/" class="footer-link-2">FAQ</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/begrippenlijst/" class="footer-link-2">Begrippenlijst</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/werken-bij/" class="footer-link-2">Vacatures</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="https://accuselect.nl/contact/" class="footer-link-2">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="text-300 bold footer-title">Contact</div>
+              <ul role="list" class="footer-list-wrapper">
+                <li class="footer-list-item">
+                  <div class="link-wrapper color-grey w-inline-block"><img src="https://accuselect.nl/images/placeholder-icon-contact-mail.svg" loading="eager" alt="" class="icon-left---brix">
+                    
+                    
+                    <span id="obf" style="text-decoration: none !important;">
+                    <script>
+                      document.getElementById("obf").innerHTML = "<n uers=\"znvygb:vasb@npphfryrpg.ay\" fglyr=\"grkg-qrpbengvba: abar !vzcbegnag;\">vasb@npphfryrpg.ay</n>".replace(/[a-zA-Z]/g, function(c) {
+                        return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+                      });
+                    </script>
+                    <noscript>
+                      <span style="unicode-bidi:bidi-override;direction:rtl;text-decoration: none !important;" class="link-text">ln.tcelesucca@ofni</span>
+                    </noscript>
+                  </span>
+
+
+                  </div>
+                </li>
+                <li class="footer-list-item">
+                  <div class="link-wrapper color-grey w-inline-block"><img src="https://accuselect.nl/images/placeholder-icon-contact-phone.svg" loading="eager" alt="" class="icon-left---brix">
+                    <a href="tel:+31851091266" style="text-decoration: none;" class="link-text">085 109 12 66</a>
+                  </div>
+                </li>
+                <li class="footer-list-item">
+                  <div class="icon-pagraph-wrapper"><img src="https://accuselect.nl/images/placeholder-icon-contact-address.svg" loading="eager" alt="" class="icon-left---brix address">
+                    <p style="color: #7e828f">Jodenbreestraat 25<br>1011 NH Amsterdam</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="w-layout-grid grid-footer-v1---2-columns grid-center bottom">
+            <div id="w-node-_2ee9497c-58ac-fa6c-311a-49a3f6db3c22-dcc6da57">
+              <p class="mg-bottom-0">Accuselect B.V. | KVK: 87814048 | BTW: NL864414298B01</p>
+            </div>
+            <div id="w-node-_2ee9497c-58ac-fa6c-311a-49a3f6db3c29-dcc6da57">
+              <div class="horizontal-flex end tablet-start">
+                <p class="mg-bottom-0">Copyright © 2024 | <a href="https://accuselect.nl/documents/algemene_voorwaarden/">Algemene voorwaarden</a> | <a href="https://accuselect.nl/privacy">Privacy Policy</a> | <a href="#" data-cc="c-settings">Cookie instellingen</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  
+        <script defer src="https://accuselect.nl/js/iframemanager.js"></script>
+  <script defer src="https://accuselect.nl/js/iframemanager-init.js"></script>
+  <script defer src="https://accuselect.nl/js/cookieconsent.js"></script>
+  <script defer src="https://accuselect.nl/js/cookieconsent-init.js"></script>
+  
+  <script src="https://accuselect.nl/js/jquery-3.5.1.min.dc5e7f18c8.js?site=634ff33c6479b46ad3b51b0e" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://accuselect.nl/js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW2BGMN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/plain" data-cookiecategory="targeting">
+function consentGranted() {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted'
+    });
+  }
+  consentGranted(); 
+</script>
+<script type="text/plain" data-cookiecategory="analytics">
+function consentGranted2() {
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+  }
+  consentGranted2(); 
+</script>
+<script type="text/plain" data-cookiecategory="analytics">
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_CWixEpO2E5YWb9URHHVX9xIG7HRscM0AQ7pLm2yg4oY',{api_host:'https://app.posthog.com'})
+</script>
+<script type="text/plain" data-cookiecategory="targeting">
+function consentGranted3() {
+    gtag('consent', 'update', {
+      'personalization_storage': 'granted'
+    });
+  }
+  consentGranted3(); 
+</script>
+
+
+<script type="text/plain" data-cookiecategory="analytics">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "//cdn.mouseflow.com/projects/47aa7381-52ed-43a6-84ff-f1646affe961.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>

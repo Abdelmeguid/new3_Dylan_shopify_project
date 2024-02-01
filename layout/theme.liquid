@@ -31,6 +31,12 @@
 
   <!-- CSS ================================================== -->
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'accuselect-be-webflow.css' | asset_url | stylesheet_tag }} 
+ {{ 'cookieconsent.css' | asset_url | stylesheet_tag }} 
+ {{ 'iframemanager.css' | asset_url | stylesheet_tag }}
+    {{ 'normalize.css' | asset_url | stylesheet_tag }}
+    {{ 'overwrite.css' | asset_url | stylesheet_tag }} 
+    {{ 'webflow.css' | asset_url | stylesheet_tag }}
 
   <!-- Vendors ================================================== -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -62,6 +68,8 @@
   <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
 
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+
+
 
   <!-- Header hook for plugins ================================================== -->
   {{ content_for_header }}
@@ -127,7 +135,7 @@
 
   <div id="PageContainer" class="page-container">
     
-    {% include 'announcement' %}
+    <!-- {% include 'announcement' %} -->
 
     {% section 'header' %}
     
@@ -228,7 +236,7 @@
   </script>
   {% endif %}
       
-{% include 'sticky-cart-by-uplinkly' %}
+{% include 'sticky-cart-by-uplinkly' %} 
 {% include 'cjpod' %}
 </body>
 </html>

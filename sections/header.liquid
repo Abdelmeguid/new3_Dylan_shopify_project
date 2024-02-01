@@ -1,231 +1,170 @@
-<div class="header-container
-            drawer__header-container
-            nav-{{ section.settings.navigation_type }}"
-     data-section-id="{{ section.id }}" data-section-type="header-section" data-template="{{ template.name }}">
-    
-      <!-- Header -->
-	  <header class="site-header" role="banner">
-		<div class="{% if section.settings.navigation_wrapper == 'fluid' %}wrapper-fluid{% else %}wrapper{% endif %} header-wrapper">
-          
-          <!-- left icons -->
-          <div class="nav-containers nav-container-left-icons">
-            <ul class="inner-nav-containers">
-              <li class="site-nav__item site-nav--open">
-                <a href="" class="site-nav__link site-nav__link--icon js-drawer-open-button-left" aria-controls="NavDrawer">
-                  <span class="icon-fallback-text">
-                    <span class="fas fa-bars fa-fw" aria-hidden="true"></span>
-                    <span class="fallback-text">{{ 'general.drawers.navigation' | t }}</span>
-                  </span>
-                </a>
-              </li>
-              {% if shop.customer_accounts_enabled %}
-                <li class="site-nav__item {% if section.settings.navigation_type != "hidden" %}large--hide {% endif %}">
-                  <a class="site-nav__link site-nav__link--icon" href="/account">
-                    <span class="icon-fallback-text">
-                      <span class="fas fa-user fa-fw" aria-hidden="true"></span>
-                      <span class="fallback-text">
-                        {% if customer %}
-                          {{ 'layout.customer.account' | t }}
-                        {% else %}
-                          {{ 'layout.customer.log_in' | t }}
-                        {% endif %}
-                      </span>
-                    </span>
-                  </a>
-                </li>
-              {% endif %}
-            </ul>
+{% comment %} Header section {% endcomment %}
+
+
+  
+
+<div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" data-doc-height="1" role="banner" class="navbar-5 w-nav">
+  <a style="margin-left: 5%; margin-right: 30px;" href="https://accuselect.nl/">
+    <img style="width: 150px;max-width: max-content;" href="https://accuselect.nl/" src="https://accuselect.nl/images/logo-orange.png" loading="lazy" srcset="https://accuselect.nl/images/logo-orange-p-500.png 500w, https://accuselect.nl/images/logo-orange-p-800.png 800w, https://accuselect.nl/images/logo-orange-p-1080.png 1080w, https://accuselect.nl/images/logo-orange-p-1600.png 1600w, https://accuselect.nl/images/logo-orange-p-2000.png 2000w, https://accuselect.nl/images/logo-orange.png 3046w" sizes="(max-width: 479px) 20vw, (max-width: 767px) 15vw, 8vw" alt="Accuselect logo, besparen met een thuisbatterij" class="image-18">
+    {% comment %} {% assign customLogo = section.settings.custom_logo | default: "https://cdn.shopify.com/s/files/1/0784/5507/9254/files/logo-orange-p-1080.png?v=1706789686" %}
+
+  <img style="width: 150px; max-width: max-content;" href="https://accuselect.nl/" src="{{ customLogo }}" loading="lazy" alt="Accuselect logo" class="image-18"> {% endcomment %}
+  </a>
+  <div class="container-10 w-container">
+    <nav role="navigation" class="nav-menu-4 w-nav-menu" style="width: 100%; ">
+      <div class="blx-b-wrap-link-1-2">
+        <div data-hover="false" data-delay="0" class="blx-b-dropdown-1-3 w-dropdown">
+          <div class="blx-b-dropdown-open-1-2 w-dropdown-toggle">
+            <div class="blx-b-link-1">Thuisbatterij</div>
           </div>
-          
-          <!-- Logo -->
-          <div class="nav-containers nav-container-logo">
-            <ul class="inner-nav-containers">
-              
-                {% assign image_size = section.settings.height_logo | prepend: 'x' %}
-                {% assign image_size_mobile = section.settings.height_logo_mobile | prepend: 'x' %}
-              
-				{% if template.name == 'index' %}
-                	<h1 class="site-header__logo" itemscope itemtype="http://schema.org/Organization">
-              	{% else %}
-                	<div class="site-header__logo" itemscope itemtype="http://schema.org/Organization">
-              	{% endif %}
-                	<a href="{{ routes.root_url }}" itemprop="url" class="site-header__logo-link">
-               			{% if section.settings.inverted_logo and template.name == 'index' or template.name == 'collection' or template.name == 'article' %}
-                          	<img class="logo inverted-logo" src="{{ section.settings.inverted_logo | img_url: image_size }}"
-                            srcset="{{ section.settings.inverted_logo | img_url: image_size }} 1x, {{ section.settings.inverted_logo | img_url: image_size, scale: 2 }} 2x"
-                            alt="{{ section.settings.inverted_logo.alt | default: shop.name }}"
-                            itemprop="logo">
-                        {% else %}
-                      		<span class="inverted-logo">{{ shop.name }}</span> 
-						{% endif %}
-                    
-						{% if section.settings.default_logo %}
-                        	<img class="logo default-logo" src="{{ section.settings.default_logo | img_url: image_size }}"
-                        	srcset="{{ section.settings.default_logo | img_url: image_size }} 1x, {{ section.settings.default_logo | img_url: image_size, scale: 2 }} 2x"
-                       		alt="{{ section.settings.default_logo.alt | default: shop.name }}"
-                   			itemprop="logo">
-                      
-                      		<img class="logo mobile-logo" src="{{ section.settings.default_logo | img_url: image_size_mobile }}"
-                        	srcset="{{ section.settings.default_logo | img_url: image_size_mobile }} 1x, {{ section.settings.default_logo | img_url: image_size_mobile, scale: 2 }} 2x"
-                       		alt="{{ section.settings.default_logo.alt | default: shop.name }}"
-                   			itemprop="logo">
-                      	{% else %}
-                			<span class="default-logo">{{ shop.name }}</span>
-                            <span class="mobile-logo">{{ shop.name }}</span>
-						{% endif %}
-                	</a>
-				{% if template.name == 'index' %}
-                	</h1>
-              	{% else %}
-              		</div>
-				{% endif %}
-            
-            </ul>
-          </div>
-          
-          <!-- Navigation menu -->
-          <div id="AccessibleNav" class="site-nav nav-containers nav-container-menu">
-            <ul class="inner-nav-containers">         
-                {% for link in linklists[section.settings.main_menu_link_list].links %}
-                  {% if link.links != blank %}
-                  {% assign parent_index = forloop.index %}
-                    <li
-                      class="site-nav__item site-nav--has-dropdown {% if link.active %}site-nav--active{% endif %}"
-                      aria-haspopup="true"
-                      data-meganav-type="parent">
-                      <a
-                        href="{{ link.url }}"
-                        class="site-nav__link"
-                        data-meganav-type="parent"
-                        aria-controls="MenuParent-{{ parent_index }}"
-                        aria-expanded="false"
-                        {% unless template.name == 'index' %}{% if link.active %}aria-current="page"{% endif %}{% endunless%}>
-                          {{ link.title | escape }}
-                          <span class="fas fa-angle-down" aria-hidden="true"></span>
+          <nav class="blx-b-dropdown-list-1-2 w-dropdown-list">
+            <div class="blx-b-container-list-1-2 overons">
+              <div class="blx-b-wrap-grid-1-2 overons">
+                <div class="blx-b-container-grid-1-2">
+                  <div id="w-node-_88c5462e-692c-1809-f92c-c391fc123b3b-d2b51b13" class="blx-b-grid-wrap-link-1">
+                    <div class="blx-b-grid-wrap-heading-1">
+                      <a href="https://accuselect.nl/thuisbatterij/hoe-werkt-het/" class="blx-b-lin-1 w-inline-block">
+                        <div class="blx-b-grid-link-1" >Hoe werkt een thuisbatterij?</div>
                       </a>
-                      <ul
-                        id="MenuParent-{{ parent_index }}"
-                        class="site-nav__dropdown {% if link.levels == 2 %}site-nav--has-grandchildren{% endif %}"
-                        data-meganav-dropdown>
-                        {% for childlink in link.links %}
-                          {% if childlink.links != blank %}
-                          {% assign child_index = forloop.index %}
-                            <li
-                              class="site-nav__item site-nav--has-dropdown site-nav--has-dropdown-grandchild {% if childlink.active %}site-nav--active{% endif %}"
-                              aria-haspopup="true">
-                              <a
-                                href="{{ childlink.url }}"
-                                class="site-nav__dropdown-link"
-                                aria-controls="MenuChildren-{{ parent_index }}-{{ child_index }}"
-                                data-meganav-type="parent"
-                                {% unless template.name == 'index' %}{% if childlink.active %}aria-current="page"{% endif %}{% endunless%}
-                                tabindex="-1">
-                                  {{ childlink.title | escape }}
-                                  <span class="fas fa-angle-right" aria-hidden="true"></span>
-                              </a>
-                              <div class="site-nav__dropdown-grandchild">
-                                <ul
-                                  id="MenuChildren-{{ parent_index }}-{{ child_index }}"
-                                  data-meganav-dropdown>
-                                  {% for grandchildlink in childlink.links %}
-                                    <li{% if grandchildlink.active %} class="site-nav--active"{% endif %}>
-                                      <a
-                                        href="{{ grandchildlink.url }}"
-                                        class="site-nav__dropdown-link"
-                                        data-meganav-type="child"
-                                        {% unless template.name == 'index' %}{% if grandchildlink.active %}aria-current="page"{% endif %}{% endunless %}
-                                        tabindex="-1">
-                                          {{ grandchildlink.title | escape }}
-                                        </a>
-                                    </li>
-                                  {% endfor %}
-                                </ul>
-                              </div>
-                            </li>
-                          {% else %}
-                            <li{% if childlink.active %} class="site-nav--active"{% endif %}>
-                              <a
-                                href="{{ childlink.url }}"
-                                class="site-nav__dropdown-link"
-                                data-meganav-type="child"
-                                {% if childlink.active %}aria-current="page"{% endif %}
-                                tabindex="-1">
-                                  {{ childlink.title | escape }}
-                              </a>
-                            </li>
-                          {% endif %}
-                        {% endfor %}
-                      </ul>
-                    </li>
-                  {% else %}
-                    <li class="site-nav__item{% if link.active %} site-nav--active{% endif %}">
-                      <a
-                        href="{{ link.url }}"
-                        class="site-nav__link"
-                        data-meganav-type="child"
-                        {% unless template.name == 'index' %}{% if link.active %}aria-current="page"{% endif %}{% endunless%}>
-                          {{ link.title | escape }}
+                    </div>
+                  </div>
+                  <div id="w-node-_88c5462e-692c-1809-f92c-c391fc123b42-d2b51b13" class="blx-b-grid-wrap-link-1">
+                    <div class="blx-b-grid-wrap-heading-1">
+                      <a href="https://accuselect.nl/thuisbatterij/waarom/" class="blx-b-lin-1 w-inline-block">
+                        <div class="blx-b-grid-link-1" >Waarom een thuisbatterij?</div>
                       </a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-            </ul>
-          </div>
-            
-          <!-- right icons -->
-          <div class="nav-containers nav-container-right-icons">
-            <ul class="inner-nav-containers">
-              {% if settings.position_currency_converter == "header" %}{% include "currency-selector" %}{% endif %}
-              
-              {% if shop.customer_accounts_enabled %}
-              <li class="site-nav__item small--hide medium--hide {% if section.settings.navigation_type == "hidden" %}large--hide {% endif %}">
-                <a class="site-nav__link site-nav__link--icon" href="/account">
-                  <span class="icon-fallback-text">
-                    <span class="fas fa-user fa-fw" aria-hidden="true"></span>
-                    <span class="fallback-text">
-                      {% if customer %}
-                      {{ 'layout.customer.account' | t }}
-                      {% else %}
-                      {{ 'layout.customer.log_in' | t }}
-                      {% endif %}
-                    </span>
-                  </span>
-                </a>
-              </li>
-              {% endif %}
-
-              {% if settings.search_enabled %}
-              <li class="site-nav__item">
-                <a href="/search" class="site-nav__link site-nav__link--icon js-drawer-open-button-top" aria-controls="SearchDrawer">
-                  <span class="icon-fallback-text">
-                    <span class="fas fa-search fa-fw" aria-hidden="true"></span>
-                    <span class="fallback-text">{{ 'general.search.title' | t }}</span>
-                  </span>
-                </a>
-              </li>
-              {% endif %}
-
-              <li class="site-nav__item">
-                <a href="/cart" class="site-nav__link site-nav__link--icon cart-link js-drawer-open-button-right" aria-controls="CartDrawer">
-                  <span class="icon-fallback-text">
-                    <span class="fas fa-shopping-{{ settings.cart_icon }} fa-fw" aria-hidden="true"></span>
-                    <span class="fallback-text">{{ 'layout.cart.title' | t }}</span>
-                  </span>
-                  <span class="cart-link__bubble animated infinite rubberBand {% if cart.item_count > 0 %} cart-link__bubble--visible{% endif %} "></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
+                    </div>
+                  </div>
+                  <div id="w-node-_88c5462e-692c-1809-f92c-c391fc123b49-d2b51b13" class="blx-b-grid-wrap-link-1">
+                    <div class="blx-b-grid-wrap-heading-1">
+                      <a href="https://accuselect.nl/verduurzamen/" class="blx-b-lin-1 w-inline-block">
+                        <div class="blx-b-grid-link-1" >Verduurzamen</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div id="w-node-_88c5462e-692c-1809-f92c-c391fc123b49-d2b51b13" class="blx-b-grid-wrap-link-1">
+                    <div class="blx-b-grid-wrap-heading-1">
+                      <a href="https://accuselect.nl/thuisbatterij-subsidie/" class="blx-b-lin-1 w-inline-block">
+                        <div class="blx-b-grid-link-1" >Subsidie</div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="blx-b-container-grid-1-2">
+                  <div id="w-node-_88c5462e-692c-1809-f92c-c391fc123b55-d2b51b13" class="blx-b-grid-wrap-link-1">
+                    <div class="blx-b-grid-wrap-heading-1">
+                      <a href="https://accuselect.nl/thuisbatterij/slimme-aansturing/" class="blx-b-lin-1 w-inline-block">
+                        <div class="blx-b-grid-link-1" >Slimme aansturing</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div id="w-node-_88c5462e-692c-1809-f92c-c391fc123b55-d2b51b13" class="blx-b-grid-wrap-link-1">
+                    <div class="blx-b-grid-wrap-heading-1">
+                      <a href="https://accuselect.nl/thuisbatterij/off-grid/" class="blx-b-lin-1 w-inline-block">
+                        <div class="blx-b-grid-link-1" >Thuisbatterij voor stroomuitval</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div id="w-node-_88c5462e-692c-1809-f92c-c391fc123b5c-d2b51b13" class="blx-b-grid-wrap-link-1">
+                    <div class="blx-b-grid-wrap-heading-1">
+                      <a href="https://accuselect.nl/installatie/" class="blx-b-lin-1 w-inline-block">
+                        <div class="blx-b-grid-link-1" >Installatie</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div id="w-node-_88c5462e-692c-1809-f92c-c391fc123b5c-d2b51b13" class="blx-b-grid-wrap-link-1">
+                    <div class="blx-b-grid-wrap-heading-1">
+                      <a href="https://accuselect.nl/thuisbatterij/btw-teruggave/" class="blx-b-lin-1 w-inline-block">
+                        <div class="blx-b-grid-link-1" >BTW teruggave</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
-      </header>
-
+      </div>
+      <style>
+        @media (max-width: 767px) {
+          .directmenu {
+            display: block !important;
+          }
+        }
+      </style>
+      <a href="https://accuselect.nl/kopen/thuisbatterij-samenstellen/" class="blx-b-link-1 w-nav-link directmenu" style="display: none;" >Thuisbatterij kopen</a>
+      <a href="https://accuselect.nl/thuisbatterij/" class="blx-b-link-1 hide w-nav-link">Thuisbatterij</a>
+      <a href="https://accuselect.nl/thuisbatterij/hoe-werkt-het/" class="blx-b-link-1 sub w-nav-link" >Hoe werkt een thuisbatterij?</a>
+      <a href="https://accuselect.nl/thuisbatterij/waarom/" class="blx-b-link-1 sub w-nav-link" >Waarom een thuisbatterij?</a>
+      <a href="https://accuselect.nl/verduurzamen/" class="blx-b-link-1 sub w-nav-link" >Verduurzamen</a>
+      <a href="https://accuselect.nl/thuisbatterij/slimme-aansturing/" class="blx-b-link-1 sub w-nav-link" >Slimme aansturing</a>
+      <a href="https://accuselect.nl/thuisbatterij/off-grid/" class="blx-b-link-1 sub w-nav-link" >Thuisbatterij voor stroomuitval</a>
+      <a href="https://accuselect.nl/installatie/" class="blx-b-link-1 sub w-nav-link" >Installatie</a>
+      <a href="https://accuselect.nl/thuisbatterij/btw-teruggave/" class="blx-b-link-1 sub w-nav-link" >BTW teruggave</a>
+      <a href="https://accuselect.nl/thuisbatterij-subsidie/" class="blx-b-link-1 sub w-nav-link" >Subsidie</a>
+      <a href="https://accuselect.nl/besparen/" class="blx-b-link-1 w-nav-link" >Besparen</a>
+      <a href="https://accuselect.nl/thuisbatterij/zonnepanelen/" class="blx-b-link-1 w-nav-link" >Zonne-energie opslaan</a>
+      <a href="https://accuselect.nl/over-ons/" class="blx-b-link-1 hide w-nav-link" >Over ons</a>
+      <a href="https://accuselect.nl/over-ons/" class="blx-b-link-1 sub w-nav-link" >Accuselect</a>
+      <a href="https://accuselect.nl/faq/" class="blx-b-link-1 sub w-nav-link" >FAQ</a>
+      <a href="https://accuselect.nl/begrippenlijst/" class="blx-b-link-1 sub w-nav-link" >Begrippenlijst</a>
+      <a href="https://accuselect.nl/werken-bij/" class="blx-b-link-1 sub w-nav-link" >Werken bij Accuselect</a>
+      <a href="https://accuselect.nl/contact/" class="blx-b-link-1 sub w-nav-link" >Contact</a>
+      <div class="blx-b-wrap-link-1-2">
+        <div data-hover="false" data-delay="0" class="blx-c-dropdown-1-1-2 w-dropdown">
+          <div class="blx-c-dropdowntoggle-1-1-2 w-dropdown-toggle">
+            <div class="blx-b-link-1">Over ons</div>
+          </div>
+          <nav class="blx-c-dropdown-list-1-1-3 w-dropdown-list">
+            <div class="blx-c-wrap-list-1-1 _1">
+              <div class="blx-c-container-grid-1">
+                <div id="w-node-_516355fa-29c9-39ac-a2b6-fe92223ca552-d2b51b13" class="blx-b-grid-wrap-link-1">
+                  <div class="blx-b-grid-wrap-heading-1">
+                    <a href="https://accuselect.nl/over-ons/" class="blx-b-link-3 w-inline-block">
+                      <div class="blx-b-grid-link-1" >Accuselect</div>
+                    </a>
+                  </div>
+                </div>
+                <div id="w-node-_516355fa-29c9-39ac-a2b6-fe92223ca559-d2b51b13" class="blx-b-grid-wrap-link-1">
+                  <div class="blx-b-grid-wrap-heading-1">
+                    <a href="https://accuselect.nl/faq/" class="blx-b-grid-link-1" >Veelgestelde vragen</a>
+                  </div>
+                </div>
+                <div id="w-node-c172502f-e893-e8d1-434a-fffde6e80552-d2b51b13" class="blx-b-grid-wrap-link-1">
+                  <div class="blx-b-grid-wrap-heading-1">
+                    <a href="https://accuselect.nl/begrippenlijst/" class="blx-b-grid-link-1" >Begrippenlijst</a>
+                  </div>
+                </div>
+                <div id="w-node-_1b1053cc-64be-d284-2fb8-a9c855d7c7e9-d2b51b13" class="blx-b-grid-wrap-link-1">
+                  <div class="blx-b-grid-wrap-heading-1">
+                    <a href="https://accuselect.nl/werken-bij/" class="blx-b-grid-link-1" >Werken bij Accuselect</a>
+                  </div>
+                </div>
+                <div id="w-node-_1b1053cc-64be-d284-2fb8-a9c855d7c7e9-d2b51b13" class="blx-b-grid-wrap-link-1">
+                  <div class="blx-b-grid-wrap-heading-1">
+                    <a href="https://accuselect.nl/contact/" class="blx-b-grid-link-1" >Contact</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <a href="https://accuselect.nl/kopen/thuisbatterij-samenstellen" aria-current="page" style="width: 500%" class="blx-c-button-1-3 direct w--current hanimate">Thuisbatterij kopen</a>
+  <a href="https://accuselect.nl/#start" aria-current="page" style="width: 500%" class="blx-c-button-1-3 w--current hanimate">Bereken besparing</a>
+  <div class="menu-button-5 w-nav-button">
+    <div class="icon-2 w-icon-nav-menu"></div>
+  </div>
 </div>
+
 
 {% schema %}
   {
     "name": "Header",
-	"class": "header-section",
+	
     "settings": [
       {
         "type": "image_picker",
