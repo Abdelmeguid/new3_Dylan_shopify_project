@@ -502,18 +502,12 @@
         "type": "bluepart",
         "settings": {
         }
-      },
-      "product_new_e6qzz6": {
-        "type": "product-new",
-        "settings": {
-        }
       }
     },
     "content_for_index": [
       "1568145568761",
       "1594044373366",
-      "bluepart_W9UdgY",
-      "product_new_e6qzz6"
+      "bluepart_W9UdgY"
     ]
   }
 }
