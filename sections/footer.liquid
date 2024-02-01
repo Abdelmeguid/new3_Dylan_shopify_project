@@ -193,18 +193,20 @@
     <div class="wrapper">
       <div class="grid">
         
-        <div class="grid__item large--one-half">
-          {% if settings.position_currency_converter == "footer" %}{% include "currency-selector" %}{% endif %}
-          <span class="credentials">
-            <span>Copyright &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: '/'  }}</span>
-          </span>
-        </div>
+       
         
         <div class="grid__item large--one-half large--text-right">
           {% if section.settings.show_payment_icons %}
             {% include 'payment-icons' %}
           {% endif %}
         </div>
+
+        <div class="grid__item large--one-half">
+        {% if settings.position_currency_converter == "footer" %}{% include "currency-selector" %}{% endif %}
+        <span class="credentials">
+          <span>Copyright &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: '/'  }}</span>
+        </span>
+      </div>
         
       </div>
     </div>
