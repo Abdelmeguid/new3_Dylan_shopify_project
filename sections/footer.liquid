@@ -195,9 +195,9 @@
         
         <div class="grid__item large--one-half">
           {% if settings.position_currency_converter == "footer" %}{% include "currency-selector" %}{% endif %}
-          {% comment %} <span class="credentials">
-            <span>Copyright &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: '/'  }}</span>
-          </span> {% endcomment %}
+          <span class="credentials">
+            {% comment %} <span>Copyright &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: '/'  }}</span> {% endcomment %}
+          </span>
         </div>
         
         <div class="grid__item large--one-half large--text-right">
