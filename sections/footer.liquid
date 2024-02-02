@@ -191,7 +191,7 @@
   
   <div class="bottom-footer small--text-center medium--text-center">
     <div class="wrapper">
-      <div class="grid">
+      <div class="grid" style="display:grid; grid-gap:5px;">
         
        
         
@@ -202,7 +202,9 @@
         </div>
 
         <div class="grid__item large--one-half">
-       
+        
+        {% if settings.position_currency_converter == "footer" %}{% include "currency-selector" %}{% endif %}
+          
         <span class="credentials">
           <span>Copyright &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: '/'  }}</span>
         </span>
