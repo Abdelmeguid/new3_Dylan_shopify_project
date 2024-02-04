@@ -186,9 +186,25 @@
 {% comment %} part 5 product {% endcomment %}
 
 <div class="container information">
-      <div class="title-wrap-centre">
+      <div class="title-wrap-centre" id="welke">
         <h2 class="header-h4">Welke thuisbatterij past bij jou?</h2>
       </div>
+      {% comment %} ################################### {% endcomment %}
+      {% comment %} below try to achieve applay a class with scroll using AOS + below commented code have more feature in AOS {% endcomment %}
+      {% comment %} <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true" class="header-column information w-col w-col-6 aos-init aos-animate" id="targetElement">
+    <img src="https://cdn.shopify.com/s/files/1/0784/5507/9254/files/illustration_home-with-battery-outside_eae88527-4cb2-4a12-a87a-88fde250ab8d.png?v=1706784950" class="illustration home">
+</div> {% endcomment %}
+
+
+<script>
+    document.addEventListener('aos:in:targetElement', function(event) {
+        // Element is now in view
+        var targetElement = document.getElementById('welke');
+        targetElement.classList.add('animate__animated', 'animate__heartBeat');
+    });
+</script>
+
+      {% comment %} ################################### {% endcomment %}
       <div class="w-layout-grid grid-batteries home">
         <div class="card content-left pd-32px---48px---56px battery"><img sizes="(max-width: 479px) 81vw, (max-width: 767px) 85vw, (max-width: 991px) 86vw, (max-width: 1439px) 750px, 1158px" srcset="https://accuselect.nl/images/Giv3-10-p-500.png 500w, https://accuselect.nl/images/Giv3-10-p-800.png 800w, https://accuselect.nl/images/Giv3-10-p-1080.png 1080w, https://accuselect.nl/images/Giv3-10-p-1600.png 1600w, https://accuselect.nl/images/Giv3-10.png 1724w" alt="GivEnergy thuisbatterij stackable 3 fase Nederland slimme sturing" src="https://accuselect.nl/images/Giv3-10.png" class="image-100">
           <p class="heading-5 review"><strong>GivEnergy Stackable Battery</strong></p>
